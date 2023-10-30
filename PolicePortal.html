@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Missing Person</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .search-box {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Missing Person</h1>
+            <form action="Searching.php" method="POST">
+                <input type="text" class="search-box" placeholder="Enter a name or description" name="keyword">
+                <button type="submit" class="search-button" value="Submit">Search</button>
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>
