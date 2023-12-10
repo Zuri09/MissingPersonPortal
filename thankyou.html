@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Report Submitted</title>
     <style>
@@ -9,6 +10,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
+            background-image: url(http://localhost/missingperson/imagesforwebsite/background_for_report.jpg);
         }
 
         .container {
@@ -19,6 +21,10 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             margin: 0 auto;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, .2);
+            backdrop-filter: blur(15px);
+            text-align: center;
         }
 
         h1 {
@@ -40,10 +46,15 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
+    <div class="container" align="center">
         <h1>Thank you for reporting</h1>
         <button id="home-button" onclick="window.location.href = 'new_form.html'">Report Another Missing Person</button>
+        <br>
+        <br>
+        <button id="home-button" onclick="window.location.href = 'index.html'"> Return to home </button>
     </div>
 </body>
+
 </html>

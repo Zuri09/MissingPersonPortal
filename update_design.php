@@ -156,12 +156,16 @@ $result = mysqli_fetch_assoc($data);
         $last_seen = $_POST["last_seen"];
         $social_media_accounts = $_POST["socials"]; 
         $status = $_POST["status"];  
-        $img_folder = $_POST["photo"];
-    
-        //$filename = $_FILES["photo"]["name"];
-        //$tempname = $_FILES["photo"]["tmp_name"];
-        //$img_folder = "images/".$filename;
-        //move_uploaded_file($tempname,$img_folder);
+        // $img_folder = $_POST["photo"];
+        if($result['photo'] == $_POST['photo']){
+            $img_folder = $result['photo'];
+        }
+        else {
+            $filename = $_FILES["photo"]["name"];
+            $tempname = $_FILES["photo"]["tmp_name"];
+            $img_folder = "images/".$filename;
+            move_uploaded_file($tempname,$img_folder);
+        }
         $stmt = $conn->prepare("UPDATE `missingpersondetails` set fname='$fname',mname='$mname', lname='$lname', dob='$dob', family_member_name='$fmname', address='$address', phone='$phone', email='$email', lastseen='$last_seen', socials='$social_media_accounts', photo='$img_folder', status='$status' WHERE case_id='$id'" );
             if ($stmt->execute()) {
                 echo "<script>alert('Records are updated')</script>";

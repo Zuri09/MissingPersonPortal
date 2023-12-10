@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Missing Person Report Form</title>
+    <title>Ensure Secure</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #333;
             padding: 20px;
             margin: 0;
             display: flex;
@@ -14,33 +13,71 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-color: #4B0082;
+            /* Indigo background color */
+            color: #fff;
+            background-image: url(http://localhost/missingperson/imagesforwebsite/background_for_report.jpg);
         }
+
+        .company-name {
+            font-size: 36px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
         h1 {
             text-align: center;
-            color: #007bff;
+            color: black;
         }
+
+        header {
+            background: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .company-logo {
+            margin-right: 10px;
+        }
+
         form {
-            max-width: 1000px; /* Increased width for landscape mode */
+            max-width: 3000px;
+            /* Increased width for landscape mode */
             padding: 20px;
-            background-color: #fff;
+
             border-radius: 5px;
             box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
         }
+
         .form-row {
             display: flex;
             justify-content: space-between;
+            color: white;
+
         }
+
         .form-col {
-            width: 20%; /* Three equal columns in landscape mode */
+            width: 20%;
+            color: white;
         }
+
         .form-col:first-child {
-            margin-right: 2%; /* Add margin to separate the columns */
+            margin-right: 2%;
         }
+
         label {
             display: block;
             font-weight: bold;
             margin: 15px 0;
         }
+
         input[type="text"],
         input[type="date"],
         input[type="email"],
@@ -51,22 +88,39 @@
             margin: 5px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
+            color: black;
         }
+
         input[type="submit"] {
             background-color: #007bff;
-            color: #fff;
+            color: black;
             padding: 10px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
+
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        img {
+            height: 80px;
+            width: 80px;
+
+        }
     </style>
 </head>
+
 <body>
-    <h1>Missing Person Report Form</h1>
+
+    <!-- <img src="images\f2.png" alt="Ensure Secure Logo" class="company-logo" align="left"> -->
+    <p>
+    <h2>Missing Person Report Form</h2>
+    </h1>
+    </p>
+    </div>
+
     <form action="submit_form.php" method="post" enctype="multipart/form-data">
         <div class="form-row">
             <div class="form-col">
@@ -119,4 +173,5 @@
         <input type="submit" value="Submit">
     </form>
 </body>
+
 </html>
